@@ -7,6 +7,11 @@
 
 //Code here
 
+name = "Dustan";
+function greeting(name) {
+    return "Hello, " + name;
+};
+
 //////////////////PROBLEM 2////////////////////
 
 //Rewrite the function greeting as a function expression.
@@ -14,12 +19,19 @@
 
 //Code Here
 
+var newGreeting = function (name) {
+    return "Hello, " + name;
+};
+
 //////////////////PROBLEM 3////////////////////
 
 //Rewrite the function greeting as an arrow function.
 //Name it finalGreeting.
 
 //Code Here
+var finalGreeting = (name) => {
+    return "Hello, " + name;
+};
 
 //////////////////PROBLEM 4////////////////////
 
@@ -27,10 +39,17 @@
 //"apples", "milk", "eggs", "bread"
 
 //Code Here
+var groceries = [ "apples", "milk", "eggs", "bread"];
 
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
-
+function doubleCheck(groceries) {
+        if (!groceries.includes("chocolate")) {
+        groceries.push("chocolate");
+        return groceries;
+    };
+    
+}
 //If the array does not contain "chocolate", add "chocolate".
 //doubleCheck should return the array.
 
